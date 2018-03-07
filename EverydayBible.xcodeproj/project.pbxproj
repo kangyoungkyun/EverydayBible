@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3D9A2D7D40CF2A83AC4A459A /* Pods_EverydayBible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A5D18B66910892C710CCC8 /* Pods_EverydayBible.framework */; };
+		523ECA3E204F7A2D0043E3D5 /* CustomActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523ECA3D204F7A2D0043E3D5 /* CustomActivityIndicatorView.swift */; };
+		523ECA40204F7AB20043E3D5 /* loading9.png in Resources */ = {isa = PBXBuildFile; fileRef = 523ECA3F204F7AB20043E3D5 /* loading9.png */; };
+		523ECA42204F82D80043E3D5 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = 523ECA41204F82D80043E3D5 /* main.png */; };
 		5254EF0A204BA2600091F971 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5254EF09204BA2600091F971 /* BoardViewController.swift */; };
+		5291115E204F913B00CD472A /* mainpage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5291115D204F913B00CD472A /* mainpage.jpg */; };
 		52D34C39204CC77F00376BA3 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D34C37204CC77F00376BA3 /* background.png */; };
 		52D34C3A204CC77F00376BA3 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D34C38204CC77F00376BA3 /* back.png */; };
 		52D34C3D204CCBCE00376BA3 /* one.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D34C3B204CCBCD00376BA3 /* one.png */; };
@@ -32,7 +36,11 @@
 
 /* Begin PBXFileReference section */
 		41106C09BFEFFB984475E5B7 /* Pods-EverydayBible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayBible.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EverydayBible/Pods-EverydayBible.debug.xcconfig"; sourceTree = "<group>"; };
+		523ECA3D204F7A2D0043E3D5 /* CustomActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorView.swift; sourceTree = "<group>"; };
+		523ECA3F204F7AB20043E3D5 /* loading9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading9.png; sourceTree = "<group>"; };
+		523ECA41204F82D80043E3D5 /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 		5254EF09204BA2600091F971 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		5291115D204F913B00CD472A /* mainpage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mainpage.jpg; sourceTree = "<group>"; };
 		52D34C37204CC77F00376BA3 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		52D34C38204CC77F00376BA3 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		52D34C3B204CCBCD00376BA3 /* one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = one.png; sourceTree = "<group>"; };
@@ -102,6 +110,7 @@
 				52EC36DC204A3FC100E08DAA /* GoogleService-Info.plist */,
 				52EC36D6204A3F9F00E08DAA /* Info.plist */,
 				52EB19E0204B93E800DFC26E /* Text.swift */,
+				523ECA3D204F7A2D0043E3D5 /* CustomActivityIndicatorView.swift */,
 			);
 			path = EverydayBible;
 			sourceTree = "<group>";
@@ -109,6 +118,9 @@
 		52EC36E2204A412800E08DAA /* Pic */ = {
 			isa = PBXGroup;
 			children = (
+				5291115D204F913B00CD472A /* mainpage.jpg */,
+				523ECA41204F82D80043E3D5 /* main.png */,
+				523ECA3F204F7AB20043E3D5 /* loading9.png */,
 				52D34C3F204CCC6800376BA3 /* two.png */,
 				52D34C3B204CCBCD00376BA3 /* one.png */,
 				52D34C38204CC77F00376BA3 /* back.png */,
@@ -203,13 +215,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				523ECA42204F82D80043E3D5 /* main.png in Resources */,
 				52EB19D9204B8E4700DFC26E /* book-cover-star-7.png in Resources */,
 				52EC36D5204A3F9F00E08DAA /* LaunchScreen.storyboard in Resources */,
+				523ECA40204F7AB20043E3D5 /* loading9.png in Resources */,
 				52D34C40204CCC6800376BA3 /* two.png in Resources */,
 				52EC36DD204A3FC100E08DAA /* GoogleService-Info.plist in Resources */,
 				52EC3708204A412800E08DAA /* if_love-book_2903245.png in Resources */,
 				52EC36D2204A3F9F00E08DAA /* Assets.xcassets in Resources */,
 				52EB19D7204B8E3F00DFC26E /* book-cover-7.png in Resources */,
+				5291115E204F913B00CD472A /* mainpage.jpg in Resources */,
 				52EB19DB204B8EA400DFC26E /* circle-tick-7.png in Resources */,
 				52D34C3D204CCBCE00376BA3 /* one.png in Resources */,
 				52EC36F6204A412800E08DAA /* if_heart-bulb_2903263.png in Resources */,
@@ -292,6 +307,7 @@
 				52EC36CD204A3F9F00E08DAA /* FirstController.swift in Sources */,
 				52EC36CB204A3F9F00E08DAA /* AppDelegate.swift in Sources */,
 				52EB19DD204B91DC00DFC26E /* ThirdViewController.swift in Sources */,
+				523ECA3E204F7A2D0043E3D5 /* CustomActivityIndicatorView.swift in Sources */,
 				5254EF0A204BA2600091F971 /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

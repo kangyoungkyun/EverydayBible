@@ -12,6 +12,12 @@ class FirstController: UIViewController {
     var ref: DatabaseReference!
     var dateCheck: String?
     
+    //인디케이터 객체
+    lazy private var activityIndicator : CustomActivityIndicatorView = {
+        let image : UIImage = UIImage(named: "loading9")!
+        return CustomActivityIndicatorView(image: image)
+    }()
+    
     let lable: UILabel = {
         let lable = UILabel()
         lable.translatesAutoresizingMaskIntoConstraints = false
@@ -43,9 +49,11 @@ class FirstController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "back.png")!)
+        addLoadingIndicator()
         getSingle()
         callFirebaseData()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "back.png")!)
+        
         setupLayout()
         navBarTitleImag()
         getCurrentDateTime()
@@ -54,7 +62,7 @@ class FirstController: UIViewController {
     
     //네비게이션 타이틀 바
     func navBarTitleImag(){
-        self.navigationItem.title = "영어성경"
+        self.navigationItem.title = "Daily Bible"
     }
     //레이아웃 설정 함수
     func setupLayout(){
@@ -99,6 +107,12 @@ class FirstController: UIViewController {
         textView.trailingAnchor.constraint(equalTo: containerBottomView.trailingAnchor, constant: -25).isActive = true
         
     }
+    //인디케이터 로딩
+    func addLoadingIndicator () {
+        print("인디케이터 로딩 시작")
+        self.view.addSubview(activityIndicator)
+        activityIndicator.center = self.view.center
+    }
     
     //현재날짜 영어
     func getCurrentDateTime(){
@@ -125,7 +139,9 @@ class FirstController: UIViewController {
     
     //firebase data 호출
     func callFirebaseData(){
-        
+        print("call firebase")
+       //인디케이터 시작
+        activityIndicator.startAnimating()
         ref = Database.database().reference().child("bible").child(dateCheck!)
         ref.child("en").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
@@ -154,7 +170,10 @@ class FirstController: UIViewController {
         }) { (error) in
             print(error.localizedDescription)
         }
-        //연결 끊어주기?
+        //엑티비티 끝
+        activityIndicator.stopAnimating()
+        print("end firebase")
+        //연결 끊어주기
         ref.removeAllObservers()
     }
     

@@ -14,18 +14,18 @@
 //4.공지사항 부분 firebase 구조 조정하기(완료)
 //5.공지사항 글 내용 넣기 맟 글꼴 및 문단 조정(완료)
 //6.웹으로 관리자 페이지 만들어서 파이어베이스에 삽입 삭제 수정 하기(완료)
+//7.커스텀 인디케이터 만들기(다시 확인)
+//8.앱 아이콘 및 초기 진입화면 만들기
 
-//7.커스텀 인디케이터 만들기
-//8.데이터 피커 이용해서 성경구절 firebase에 삽입하기 + ios 해당날짜가 없을때 처리 해주기
-//9.앱 아이콘 및 초기 진입화면 만들기
-//10.코드 정리
+
+//9.데이터 피커 이용해서 성경구절 firebase에 삽입하기 + ios 해당날짜가 없을때 처리 해주기
+//10.코드 정리 및 print문 삭제
 //11.개발자 등록 및 배포
+
 
 //포스팅
 //문단간격
 //시간 처리 함수(완료)
-
-//
 
 //파이어베이스 조회할때 tavleview나 collectionview일때
 //반드시 reload 데이터 해줘야함~!!!
@@ -38,7 +38,44 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    //인디케이터 객체
+    var actIdc = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    
+    var container: UIView!
+    
+    class func instance() -> AppDelegate{
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
+    //인디케이터 시작
+    func showActivityIndicator(){
+        if let window = window{
+             print("showActivityIndicator 인디케이터 호출")
+            container = UIWindow()
+            container.frame = window.frame
+            container.center = window.center
+            container.backgroundColor = UIColor(white:0, alpha:0.8)
+            actIdc.color = UIColor.black
+            actIdc.frame = CGRect(x: 0 , y: 0, width:40, height:40)
+            actIdc.hidesWhenStopped = true
+            actIdc.center = CGPoint(x: container.frame.size.width / 2, y: container.frame.size.height / 2)
+            container.addSubview(actIdc)
+            window.addSubview(container)
+            actIdc.startAnimating()
+        }
+    }
+    
+    //인디케이터 삭제
+    func dissmissActivityIndicator(){
+        if let _ = window{
+            print("dissmiss 인디케이터 호출")
+            container.removeFromSuperview()
+        }
+    }
+    
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         
