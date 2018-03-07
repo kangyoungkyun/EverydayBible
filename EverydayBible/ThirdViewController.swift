@@ -19,24 +19,14 @@ class ThirdViewController: UITableViewController {
         return uiView
     }()
     
-    override func loadView() {
-        super.loadView()
-        print("로드뷰")
-        callFirebaseData()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("뷰디드로드")
-        
+        callFirebaseData()
         tableView.tableFooterView = uiView
         tableView.register(TextCell.self, forCellReuseIdentifier: "Cell")
-        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "back.png")!)
         //네비게이션 타이틀
         navBarTitleImag()
-        
-        
     }
     
     // MARK: - Table view data source
@@ -74,7 +64,6 @@ class ThirdViewController: UITableViewController {
         self.navigationItem.title = "더보기"
     }
     
-    
     //firebase db 호출
     func callFirebaseData(){
         ref = Database.database().reference().child("board")
@@ -95,21 +84,16 @@ class ThirdViewController: UITableViewController {
                     }
                 }
                 
-                
                 DispatchQueue.main.async {
                     //반드시 reload 데이터 해줘야함~!!!
                     self.tableView.reloadData()
                     self.ref.removeAllObservers()
                 }
             }
-            
         }) { (error) in
             print(error.localizedDescription)
         }
-        //연결 끊어주기?
-        
     }
-    
     
     //커스텀 셀
     class TextCell: UITableViewCell{

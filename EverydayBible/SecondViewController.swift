@@ -11,8 +11,6 @@ import UIKit
 class SecondViewController: UIViewController {
     var ref: DatabaseReference!
     var dateCheck: String?
-    
-    
     let lable: UILabel = {
         let lable = UILabel()
         lable.translatesAutoresizingMaskIntoConstraints = false
@@ -41,15 +39,8 @@ class SecondViewController: UIViewController {
         
     }()
     
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("call firebase")
-        //엑티비티 시작
-        AppDelegate.instance().showActivityIndicator()
-        
         getSingle()
         callFirebaseData()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "back.png")!)
@@ -57,7 +48,6 @@ class SecondViewController: UIViewController {
         navBarTitleImag()
         
     }
-    
     
     //네비게이션 타이틀 바
     func navBarTitleImag(){
@@ -117,13 +107,11 @@ class SecondViewController: UIViewController {
         let day = calendar.component(.day, from: date)
         lable.text = "\(year)년 \(month)월 \(day)일"
         dateCheck = "\(year)\(month)\(day)"
-        print(dateCheck!)
-        
     }
     
     //firebase db 호출
     func callFirebaseData(){
-        
+       
          ref = Database.database().reference().child("bible").child(dateCheck!)
         ref.child("ko").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
@@ -151,9 +139,10 @@ class SecondViewController: UIViewController {
             
         }) { (error) in
             print(error.localizedDescription)
-        }
         
-        //연결 끊어주기?
+        }
+    
+        //연결 끊어주기
         ref.removeAllObservers()
     }
 }

@@ -52,10 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func showActivityIndicator(){
         if let window = window{
              print("showActivityIndicator 인디케이터 호출")
-            container = UIWindow()
+            container = UIView()
             container.frame = window.frame
             container.center = window.center
-            container.backgroundColor = UIColor(white:0, alpha:0.8)
+            container.backgroundColor = UIColor(white:0, alpha:0.2)
             actIdc.color = UIColor.black
             actIdc.frame = CGRect(x: 0 , y: 0, width:40, height:40)
             actIdc.hidesWhenStopped = true
