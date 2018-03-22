@@ -18,15 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainpage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="65e-LY-Y9Y">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="694"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="65e-LY-Y9Y">
+                                <rect key="frame" x="0.0" y="-43" width="375" height="775"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="65e-LY-Y9Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="8Hu-I2-PNl"/>
+                            <constraint firstItem="65e-LY-Y9Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-63" id="8Hu-I2-PNl"/>
                             <constraint firstItem="65e-LY-Y9Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="94o-JL-Ety"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="65e-LY-Y9Y" secondAttribute="bottom" constant="-27" id="DV5-xg-DuQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="65e-LY-Y9Y" secondAttribute="bottom" constant="-65" id="DV5-xg-DuQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="65e-LY-Y9Y" secondAttribute="trailing" id="UdP-h9-hM3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mainpage.jpg" width="480" height="768"/>
+        <image name="start.jpg" width="480" height="768"/>
     </resources>
 </document>

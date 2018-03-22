@@ -10,6 +10,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
     var ref: DatabaseReference!
+    var activityIndicatorView: UIActivityIndicatorView!
     var dateCheck: String?
     let lable: UILabel = {
         let lable = UILabel()
@@ -41,9 +42,28 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //인디케이터1
+        activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(activityIndicatorView)
+        activityIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        activityIndicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor,constant: 0).isActive = true
+        activityIndicatorView.bringSubview(toFront: self.view)
+        activityIndicatorView.startAnimating()
+        
+        //인디케이터2
+        DispatchQueue.main.async {
+            OperationQueue.main.addOperation() {
+                Thread.sleep(forTimeInterval: 0.7)
+                self.activityIndicatorView.stopAnimating()
+                
+            }
+        }
         getSingle()
         callFirebaseData()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "back.png")!)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:1.00, green:0.60, blue:0.60, alpha:1.0)
+        self.navigationController?.navigationBar.isTranslucent = false
         setupLayout()
         navBarTitleImag()
         
@@ -58,27 +78,26 @@ class SecondViewController: UIViewController {
         
         let containerView = UIView()
         view.addSubview(containerView)
-        
         containerView.translatesAutoresizingMaskIntoConstraints = false
         containerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        containerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
+        containerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/3).isActive = true
         
         //부모뷰에 라벨, 이미지 넣기
         containerView.addSubview(lable)
         containerView.addSubview(imageView)
         
         //라벨 제약조건 설정
-        lable.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 80).isActive = true
+        lable.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10).isActive = true
         lable.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -25).isActive = true
         
         
         //이미지 제약조건 지정
-        imageView.topAnchor.constraint(equalTo: lable.bottomAnchor, constant: 50).isActive = true
+        imageView.topAnchor.constraint(equalTo: lable.bottomAnchor, constant: 10).isActive = true
         imageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
-        imageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor,constant: -50).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor,constant: -40).isActive = true
         
         let containerBottomView = UIView()
         view.addSubview(containerBottomView)
@@ -87,14 +106,16 @@ class SecondViewController: UIViewController {
         containerBottomView.topAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
         containerBottomView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         containerBottomView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        containerBottomView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
+        containerBottomView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        containerBottomView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
         
         containerBottomView.addSubview(textView)
         
         textView.topAnchor.constraint(equalTo: containerBottomView.topAnchor).isActive = true
         textView.leadingAnchor.constraint(equalTo: containerBottomView.leadingAnchor, constant: 25).isActive = true
         textView.trailingAnchor.constraint(equalTo: containerBottomView.trailingAnchor, constant: -25).isActive = true
-        
+        //textView.bottomAnchor.constraint(equalTo: containerBottomView.bottomAnchor).isActive = true
+        textView.heightAnchor.constraint(equalTo: containerBottomView.heightAnchor).isActive = true
     }
     
     

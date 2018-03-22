@@ -8,10 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		3D9A2D7D40CF2A83AC4A459A /* Pods_EverydayBible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A5D18B66910892C710CCC8 /* Pods_EverydayBible.framework */; };
+		52062DF4206349950087491D /* two.png in Resources */ = {isa = PBXBuildFile; fileRef = 52062DF3206349950087491D /* two.png */; };
+		52062DF620634E080087491D /* ic_view_headline_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 52062DF520634E080087491D /* ic_view_headline_white.png */; };
+		52062DF820634E170087491D /* ic_view_headline.png in Resources */ = {isa = PBXBuildFile; fileRef = 52062DF720634E170087491D /* ic_view_headline.png */; };
+		52062DFA20634E540087491D /* ic_translate_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 52062DF920634E540087491D /* ic_translate_white.png */; };
+		52062DFC20634E650087491D /* ic_translate.png in Resources */ = {isa = PBXBuildFile; fileRef = 52062DFB20634E650087491D /* ic_translate.png */; };
+		52062DFE20634E970087491D /* ic_spellcheck_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 52062DFD20634E970087491D /* ic_spellcheck_white.png */; };
+		52062E0020634EBA0087491D /* ic_spellcheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 52062DFF20634EBA0087491D /* ic_spellcheck.png */; };
+		52062E0220634F110087491D /* ic_translate_white_2@.png in Resources */ = {isa = PBXBuildFile; fileRef = 52062E0120634F110087491D /* ic_translate_white_2@.png */; };
+		52062E0420634F230087491D /* ic_translate_2@.png in Resources */ = {isa = PBXBuildFile; fileRef = 52062E0320634F230087491D /* ic_translate_2@.png */; };
+		52062E06206357760087491D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52062E05206357760087491D /* MessageUI.framework */; };
+		52062E08206363570087491D /* start.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52062E07206363570087491D /* start.jpg */; };
 		523ECA3E204F7A2D0043E3D5 /* CustomActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523ECA3D204F7A2D0043E3D5 /* CustomActivityIndicatorView.swift */; };
 		523ECA40204F7AB20043E3D5 /* loading9.png in Resources */ = {isa = PBXBuildFile; fileRef = 523ECA3F204F7AB20043E3D5 /* loading9.png */; };
 		523ECA42204F82D80043E3D5 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = 523ECA41204F82D80043E3D5 /* main.png */; };
 		5254EF0A204BA2600091F971 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5254EF09204BA2600091F971 /* BoardViewController.swift */; };
+		5278829F2063804100A583C3 /* EverydayBibleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5278829E2063804100A583C3 /* EverydayBibleUITests.swift */; };
 		5291115E204F913B00CD472A /* mainpage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5291115D204F913B00CD472A /* mainpage.jpg */; };
 		52D34C39204CC77F00376BA3 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D34C37204CC77F00376BA3 /* background.png */; };
 		52D34C3A204CC77F00376BA3 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 52D34C38204CC77F00376BA3 /* back.png */; };
@@ -34,12 +46,36 @@
 		52FB1292204C3CD7004C16D0 /* text-align-justify-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 52FB1291204C3CD7004C16D0 /* text-align-justify-7.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		527882A12063804100A583C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52EC36BF204A3F9F00E08DAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52EC36C6204A3F9F00E08DAA;
+			remoteInfo = EverydayBible;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		41106C09BFEFFB984475E5B7 /* Pods-EverydayBible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayBible.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EverydayBible/Pods-EverydayBible.debug.xcconfig"; sourceTree = "<group>"; };
+		52062DF3206349950087491D /* two.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = two.png; sourceTree = "<group>"; };
+		52062DF520634E080087491D /* ic_view_headline_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_view_headline_white.png; sourceTree = "<group>"; };
+		52062DF720634E170087491D /* ic_view_headline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_view_headline.png; sourceTree = "<group>"; };
+		52062DF920634E540087491D /* ic_translate_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_translate_white.png; sourceTree = "<group>"; };
+		52062DFB20634E650087491D /* ic_translate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_translate.png; sourceTree = "<group>"; };
+		52062DFD20634E970087491D /* ic_spellcheck_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_spellcheck_white.png; sourceTree = "<group>"; };
+		52062DFF20634EBA0087491D /* ic_spellcheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_spellcheck.png; sourceTree = "<group>"; };
+		52062E0120634F110087491D /* ic_translate_white_2@.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_translate_white_2@.png"; sourceTree = "<group>"; };
+		52062E0320634F230087491D /* ic_translate_2@.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_translate_2@.png"; sourceTree = "<group>"; };
+		52062E05206357760087491D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		52062E07206363570087491D /* start.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = start.jpg; path = "../../../ㅁ/start.jpg"; sourceTree = "<group>"; };
 		523ECA3D204F7A2D0043E3D5 /* CustomActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorView.swift; sourceTree = "<group>"; };
 		523ECA3F204F7AB20043E3D5 /* loading9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading9.png; sourceTree = "<group>"; };
 		523ECA41204F82D80043E3D5 /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 		5254EF09204BA2600091F971 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		5278829C2063804100A583C3 /* EverydayBibleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EverydayBibleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5278829E2063804100A583C3 /* EverydayBibleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverydayBibleUITests.swift; sourceTree = "<group>"; };
+		527882A02063804100A583C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5291115D204F913B00CD472A /* mainpage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mainpage.jpg; sourceTree = "<group>"; };
 		52D34C37204CC77F00376BA3 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		52D34C38204CC77F00376BA3 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -67,10 +103,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		527882992063804100A583C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52EC36C4204A3F9F00E08DAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52062E06206357760087491D /* MessageUI.framework in Frameworks */,
 				3D9A2D7D40CF2A83AC4A459A /* Pods_EverydayBible.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,10 +122,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5278829D2063804100A583C3 /* EverydayBibleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5278829E2063804100A583C3 /* EverydayBibleUITests.swift */,
+				527882A02063804100A583C3 /* Info.plist */,
+			);
+			path = EverydayBibleUITests;
+			sourceTree = "<group>";
+		};
 		52EC36BE204A3F9F00E08DAA = {
 			isa = PBXGroup;
 			children = (
 				52EC36C9204A3F9F00E08DAA /* EverydayBible */,
+				5278829D2063804100A583C3 /* EverydayBibleUITests */,
 				52EC36C8204A3F9F00E08DAA /* Products */,
 				7DFF9E784256E07DEAE82B1F /* Pods */,
 				EF131A1379B3873FF738241E /* Frameworks */,
@@ -92,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				52EC36C7204A3F9F00E08DAA /* EverydayBible.app */,
+				5278829C2063804100A583C3 /* EverydayBibleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,10 +173,20 @@
 		52EC36E2204A412800E08DAA /* Pic */ = {
 			isa = PBXGroup;
 			children = (
+				52062E07206363570087491D /* start.jpg */,
+				52062E0320634F230087491D /* ic_translate_2@.png */,
+				52062E0120634F110087491D /* ic_translate_white_2@.png */,
+				52062DFF20634EBA0087491D /* ic_spellcheck.png */,
+				52062DFD20634E970087491D /* ic_spellcheck_white.png */,
+				52062DFB20634E650087491D /* ic_translate.png */,
+				52062DF920634E540087491D /* ic_translate_white.png */,
+				52062DF720634E170087491D /* ic_view_headline.png */,
+				52062DF520634E080087491D /* ic_view_headline_white.png */,
 				5291115D204F913B00CD472A /* mainpage.jpg */,
 				523ECA41204F82D80043E3D5 /* main.png */,
 				523ECA3F204F7AB20043E3D5 /* loading9.png */,
 				52D34C3F204CCC6800376BA3 /* two.png */,
+				52062DF3206349950087491D /* two.png */,
 				52D34C3B204CCBCD00376BA3 /* one.png */,
 				52D34C38204CC77F00376BA3 /* back.png */,
 				52D34C37204CC77F00376BA3 /* background.png */,
@@ -148,6 +213,7 @@
 		EF131A1379B3873FF738241E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52062E05206357760087491D /* MessageUI.framework */,
 				C0A5D18B66910892C710CCC8 /* Pods_EverydayBible.framework */,
 			);
 			name = Frameworks;
@@ -156,6 +222,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5278829B2063804100A583C3 /* EverydayBibleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 527882A52063804100A583C3 /* Build configuration list for PBXNativeTarget "EverydayBibleUITests" */;
+			buildPhases = (
+				527882982063804100A583C3 /* Sources */,
+				527882992063804100A583C3 /* Frameworks */,
+				5278829A2063804100A583C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				527882A22063804100A583C3 /* PBXTargetDependency */,
+			);
+			name = EverydayBibleUITests;
+			productName = EverydayBibleUITests;
+			productReference = 5278829C2063804100A583C3 /* EverydayBibleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		52EC36C6204A3F9F00E08DAA /* EverydayBible */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52EC36D9204A3F9F00E08DAA /* Build configuration list for PBXNativeTarget "EverydayBible" */;
@@ -186,6 +270,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = MacBookPro;
 				TargetAttributes = {
+					5278829B2063804100A583C3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 52EC36C6204A3F9F00E08DAA;
+					};
 					52EC36C6204A3F9F00E08DAA = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -206,11 +295,19 @@
 			projectRoot = "";
 			targets = (
 				52EC36C6204A3F9F00E08DAA /* EverydayBible */,
+				5278829B2063804100A583C3 /* EverydayBibleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5278829A2063804100A583C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52EC36C5204A3F9F00E08DAA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,15 +316,25 @@
 				52EB19D9204B8E4700DFC26E /* book-cover-star-7.png in Resources */,
 				52EC36D5204A3F9F00E08DAA /* LaunchScreen.storyboard in Resources */,
 				523ECA40204F7AB20043E3D5 /* loading9.png in Resources */,
+				52062DF620634E080087491D /* ic_view_headline_white.png in Resources */,
+				52062E0020634EBA0087491D /* ic_spellcheck.png in Resources */,
 				52D34C40204CCC6800376BA3 /* two.png in Resources */,
+				52062DF820634E170087491D /* ic_view_headline.png in Resources */,
 				52EC36DD204A3FC100E08DAA /* GoogleService-Info.plist in Resources */,
+				52062DF4206349950087491D /* two.png in Resources */,
 				52EC3708204A412800E08DAA /* if_love-book_2903245.png in Resources */,
 				52EC36D2204A3F9F00E08DAA /* Assets.xcassets in Resources */,
+				52062E0420634F230087491D /* ic_translate_2@.png in Resources */,
+				52062DFA20634E540087491D /* ic_translate_white.png in Resources */,
 				52EB19D7204B8E3F00DFC26E /* book-cover-7.png in Resources */,
 				5291115E204F913B00CD472A /* mainpage.jpg in Resources */,
+				52062E0220634F110087491D /* ic_translate_white_2@.png in Resources */,
+				52062DFC20634E650087491D /* ic_translate.png in Resources */,
 				52EB19DB204B8EA400DFC26E /* circle-tick-7.png in Resources */,
+				52062E08206363570087491D /* start.jpg in Resources */,
 				52D34C3D204CCBCE00376BA3 /* one.png in Resources */,
 				52EC36F6204A412800E08DAA /* if_heart-bulb_2903263.png in Resources */,
+				52062DFE20634E970087491D /* ic_spellcheck_white.png in Resources */,
 				52D34C3A204CC77F00376BA3 /* back.png in Resources */,
 				52EC3706204A412800E08DAA /* if_award-heart_2903270.png in Resources */,
 				52D34C39204CC77F00376BA3 /* background.png in Resources */,
@@ -298,6 +405,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		527882982063804100A583C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5278829F2063804100A583C3 /* EverydayBibleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52EC36C3204A3F9F00E08DAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,6 +429,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		527882A22063804100A583C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52EC36C6204A3F9F00E08DAA /* EverydayBible */;
+			targetProxy = 527882A12063804100A583C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		52EC36D3204A3F9F00E08DAA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -326,6 +449,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		527882A32063804100A583C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3HFR2QP3B2;
+				INFOPLIST_FILE = EverydayBibleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.happy.EverydayBibleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EverydayBible;
+			};
+			name = Debug;
+		};
+		527882A42063804100A583C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3HFR2QP3B2;
+				INFOPLIST_FILE = EverydayBibleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.happy.EverydayBibleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EverydayBible;
+			};
+			name = Release;
+		};
 		52EC36D7204A3F9F00E08DAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -468,6 +621,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		527882A52063804100A583C3 /* Build configuration list for PBXNativeTarget "EverydayBibleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				527882A32063804100A583C3 /* Debug */,
+				527882A42063804100A583C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		52EC36C2204A3F9F00E08DAA /* Build configuration list for PBXProject "EverydayBible" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

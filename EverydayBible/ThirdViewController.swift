@@ -7,10 +7,13 @@
 //
 import Firebase
 import UIKit
-
-class ThirdViewController: UITableViewController {
+import MessageUI
+class ThirdViewController: UITableViewController ,MFMailComposeViewControllerDelegate{
     var ref: DatabaseReference!
     var titles = [Text]()
+    
+    //let twoDimenstionArray = ["개발자에게","나가기"]
+
     
     let uiView : UIView = {
         let uiView = UIView()
@@ -22,6 +25,8 @@ class ThirdViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         callFirebaseData()
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:1.00, green:0.60, blue:0.60, alpha:1.0)
+        self.navigationController?.navigationBar.isTranslucent = false
         tableView.tableFooterView = uiView
         tableView.register(TextCell.self, forCellReuseIdentifier: "Cell")
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "back.png")!)
@@ -33,30 +38,50 @@ class ThirdViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+
+    
+    //테이블 행 개수
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return titles.count
     }
     
     //테이블 셀 구성
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TextCell
+        
         cell.myLableOne.text = titles[indexPath.row].title
         return cell
     }
     
+    
+    
     //높이
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 60
     }
     
     //셀을 클릭했을 때
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let boardViewController = BoardViewController()
-        let titles = self.titles[indexPath.row]
-        boardViewController.text = titles
-        let navController = UINavigationController(rootViewController: boardViewController)
-        present(navController, animated: true, completion: nil)
+        if (self.titles[indexPath.row].title == "개발자에게"){
+                print("개발자에게")
+            let mailComposeViewController = configuredMailComposeViewController()
+            if MFMailComposeViewController.canSendMail(){
+                self.present(mailComposeViewController, animated: true, completion: nil)
+            }else{
+                self.showSendMailErrorAlert()
+            }
+        }else{
+            
+            let boardViewController = BoardViewController()
+            let titles = self.titles[indexPath.row]
+            boardViewController.text = titles
+            let navController = UINavigationController(rootViewController: boardViewController)
+            present(navController, animated: true, completion: nil)
+        }
+        
+
     }
     
     //네비게이션 타이틀 바
@@ -79,7 +104,7 @@ class ThirdViewController: UITableViewController {
                     
                     let value = values[i] as? [String: Any]
                     if let unrappedValue = value{
-                        let textOne = Text(title:keys[i], contents:"  \(String(describing: unrappedValue["content"]!))")
+                        let textOne = Text(title:keys[i], contents:"\(String(describing: unrappedValue["content"]!))")
                         self.titles.append(textOne)
                     }
                 }
@@ -129,5 +154,35 @@ class ThirdViewController: UITableViewController {
             fatalError("init(coder:) has not been implemented")
         }
         
+    }
+    
+    //메일 컨트롤
+    func configuredMailComposeViewController() -> MFMailComposeViewController{
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setToRecipients(["abcnt@naver.com"])
+        mailComposerVC.setSubject("개발자에게")
+        mailComposerVC.setMessageBody("안녕하세요.\n\n\n", isHTML: false)
+        return mailComposerVC
+    }
+    //메일 보내기 에러
+    func showSendMailErrorAlert(){
+        let sendMailErrorAlert = UIAlertView(title: "알림", message: "메일을 보내지 못했습니다.", delegate: self, cancelButtonTitle: "OK")
+        sendMailErrorAlert.show()
+    }
+    
+    //보내기 버튼 눌렀을때 결과
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        switch result.rawValue {
+        case MFMailComposeResult.cancelled.rawValue:
+            
+            print("메일 보내기가 취소되었습니다.")
+        case MFMailComposeResult.sent.rawValue:
+            
+            print("메일 보내기 성공")
+        default:
+            break
+        }
+        self.dismiss(animated: true, completion: nil)
     }
 }

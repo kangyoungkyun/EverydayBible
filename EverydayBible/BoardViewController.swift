@@ -15,7 +15,9 @@ class BoardViewController: UIViewController {
             let paragraphStyle = NSMutableParagraphStyle()
             //줄 높이
             paragraphStyle.lineSpacing = 10
-            let attribute = NSMutableAttributedString(string: (text?.contents)!, attributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: 16),NSAttributedStringKey.foregroundColor:UIColor.black])
+            
+            
+            let attribute = NSMutableAttributedString(string: (text?.contents.replacingOccurrences(of: "\\n", with: "\n"))!, attributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: 16),NSAttributedStringKey.foregroundColor:UIColor.black])
             //줄간격 셋팅
             attribute.addAttribute(NSAttributedStringKey.paragraphStyle, value:paragraphStyle, range: NSMakeRange(0, attribute.length))
             
@@ -42,6 +44,9 @@ class BoardViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "이전", style: .plain, target: self, action: #selector(handleCancel))
         view.addSubview(textView)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:1.00, green:0.60, blue:0.60, alpha:1.0)
+        self.navigationController?.navigationBar.isTranslucent = false
+         self.navigationController?.navigationBar.tintColor = .white
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "back.png")!)
         setLayout()
     }

@@ -82,6 +82,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //1 탭바 컨트롤러를 생성하고 배경을 흰색으로 한다.
         let tbC = UITabBarController()
         tbC.view.backgroundColor = .white
+        tbC.view.tintColor = UIColor.white
+        tbC.tabBar.barTintColor = UIColor(red:1.00, green:0.60, blue:0.60, alpha:1.0)
         
         //스토리보드 없이 code로 ui 제작
         window = UIWindow()
@@ -105,15 +107,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tbC.setViewControllers([v1,v2,v3], animated: false)
         
         //직접 커스텀 하기
-        v1.tabBarItem.image = UIImage(named:"book-cover-7")?.withRenderingMode(.alwaysOriginal)
-        v2.tabBarItem.image = UIImage(named:"book-cover-star-7")?.withRenderingMode(.alwaysOriginal)
-        v3.tabBarItem.image = UIImage(named:"text-align-justify-7")?.withRenderingMode(.alwaysOriginal)
+        v1.tabBarItem.image = UIImage(named:"ic_spellcheck")?.withRenderingMode(.alwaysOriginal)
+        v2.tabBarItem.image = UIImage(named:"ic_translate")?.withRenderingMode(.alwaysOriginal)
+        v3.tabBarItem.image = UIImage(named:"ic_view_headline")?.withRenderingMode(.alwaysOriginal)
         
         //선택되었을 때
-        let image = UIImage(named:"circle-tick-7")?.withRenderingMode(.alwaysOriginal)
-        v1.tabBarItem.selectedImage = image
-        v2.tabBarItem.selectedImage = image
-        v3.tabBarItem.selectedImage = image
+        //let image =
+        v1.tabBarItem.selectedImage = UIImage(named:"ic_spellcheck_white")?.withRenderingMode(.alwaysOriginal)
+        v2.tabBarItem.selectedImage = UIImage(named:"ic_translate_white")?.withRenderingMode(.alwaysOriginal)
+        v3.tabBarItem.selectedImage = UIImage(named:"ic_view_headline_white")?.withRenderingMode(.alwaysOriginal)
         
         //제목
         v1.tabBarItem.title = "영어"
