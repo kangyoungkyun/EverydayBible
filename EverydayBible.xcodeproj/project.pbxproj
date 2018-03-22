@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3D9A2D7D40CF2A83AC4A459A /* Pods_EverydayBible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A5D18B66910892C710CCC8 /* Pods_EverydayBible.framework */; };
-		52062DF4206349950087491D /* two.png in Resources */ = {isa = PBXBuildFile; fileRef = 52062DF3206349950087491D /* two.png */; };
 		52062DF620634E080087491D /* ic_view_headline_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 52062DF520634E080087491D /* ic_view_headline_white.png */; };
 		52062DF820634E170087491D /* ic_view_headline.png in Resources */ = {isa = PBXBuildFile; fileRef = 52062DF720634E170087491D /* ic_view_headline.png */; };
 		52062DFA20634E540087491D /* ic_translate_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 52062DF920634E540087491D /* ic_translate_white.png */; };
@@ -58,7 +57,6 @@
 
 /* Begin PBXFileReference section */
 		41106C09BFEFFB984475E5B7 /* Pods-EverydayBible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayBible.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EverydayBible/Pods-EverydayBible.debug.xcconfig"; sourceTree = "<group>"; };
-		52062DF3206349950087491D /* two.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = two.png; sourceTree = "<group>"; };
 		52062DF520634E080087491D /* ic_view_headline_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_view_headline_white.png; sourceTree = "<group>"; };
 		52062DF720634E170087491D /* ic_view_headline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_view_headline.png; sourceTree = "<group>"; };
 		52062DF920634E540087491D /* ic_translate_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_translate_white.png; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 				523ECA41204F82D80043E3D5 /* main.png */,
 				523ECA3F204F7AB20043E3D5 /* loading9.png */,
 				52D34C3F204CCC6800376BA3 /* two.png */,
-				52062DF3206349950087491D /* two.png */,
 				52D34C3B204CCBCD00376BA3 /* one.png */,
 				52D34C38204CC77F00376BA3 /* back.png */,
 				52D34C37204CC77F00376BA3 /* background.png */,
@@ -321,7 +318,6 @@
 				52D34C40204CCC6800376BA3 /* two.png in Resources */,
 				52062DF820634E170087491D /* ic_view_headline.png in Resources */,
 				52EC36DD204A3FC100E08DAA /* GoogleService-Info.plist in Resources */,
-				52062DF4206349950087491D /* two.png in Resources */,
 				52EC3708204A412800E08DAA /* if_love-book_2903245.png in Resources */,
 				52EC36D2204A3F9F00E08DAA /* Assets.xcassets in Resources */,
 				52062E0420634F230087491D /* ic_translate_2@.png in Resources */,
