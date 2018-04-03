@@ -12,11 +12,7 @@ class FirstController: UIViewController {
     var ref: DatabaseReference!
     var dateCheck: String?
     var activityIndicatorView: UIActivityIndicatorView!
-    //인디케이터 객체
-    lazy private var activityIndicator : CustomActivityIndicatorView = {
-        let image : UIImage = UIImage(named: "loading9")!
-        return CustomActivityIndicatorView(image: image)
-    }()
+
     
     let lable: UILabel = {
         let lable = UILabel()
@@ -74,7 +70,6 @@ class FirstController: UIViewController {
         callFirebaseData()
         setupLayout()
         navBarTitleImag()
-        getCurrentDateTime()
     }
     
     //네비게이션 타이틀 바
@@ -121,15 +116,9 @@ class FirstController: UIViewController {
         textView.topAnchor.constraint(equalTo: containerBottomView.topAnchor).isActive = true
         textView.leadingAnchor.constraint(equalTo: containerBottomView.leadingAnchor, constant: 25).isActive = true
         textView.trailingAnchor.constraint(equalTo: containerBottomView.trailingAnchor, constant: -25).isActive = true
-        //textView.bottomAnchor.constraint(equalTo: containerBottomView.bottomAnchor).isActive = true
         textView.heightAnchor.constraint(equalTo: containerBottomView.heightAnchor).isActive = true
     }
-    //인디케이터 로딩
-    func addLoadingIndicator () {
-        print("인디케이터 로딩 시작")
-        self.view.addSubview(activityIndicator)
-        activityIndicator.center = self.view.center
-    }
+
     
     //현재날짜 영어
     func getCurrentDateTime(){
@@ -149,7 +138,7 @@ class FirstController: UIViewController {
         let year = calendar.component(.year, from: date)    //년
         let month = calendar.component(.month, from: date)  //월
         let day = calendar.component(.day, from: date)      //일
-        lable.text = "\(year)년 \(month)월 \(day)일"
+        lable.text = "\(year)-\(month)-\(day)"
         dateCheck = "\(year)\(month)\(day)"
         //print(dateCheck!)
     }
@@ -157,7 +146,7 @@ class FirstController: UIViewController {
     //firebase data 호출
     func callFirebaseData(){
         
-        print("callFire")
+        //print("callFire")
         
         ref = Database.database().reference().child("bible").child(dateCheck!)
         ref.child("en").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -168,7 +157,7 @@ class FirstController: UIViewController {
             let para = value?["para"] as? String ?? ""
             
             
-            print(head,body,para)
+            //print(head,body,para)
             
             //줄간격 객체
             let paragraphStyle = NSMutableParagraphStyle()

@@ -32,6 +32,8 @@
 //self.tableView.reloadData()
 //
 
+
+
 import UIKit
 import Firebase
 @UIApplicationMain
@@ -39,43 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    //인디케이터 객체
-    var actIdc = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
     
     var container: UIView!
-    
-    class func instance() -> AppDelegate{
-        return UIApplication.shared.delegate as! AppDelegate
-    }
-    
-    //인디케이터 시작
-    func showActivityIndicator(){
-        if let window = window{
-             print("showActivityIndicator 인디케이터 호출")
-            container = UIView()
-            container.frame = window.frame
-            container.center = window.center
-            container.backgroundColor = UIColor(white:0, alpha:0.2)
-            actIdc.color = UIColor.black
-            actIdc.frame = CGRect(x: 0 , y: 0, width:40, height:40)
-            actIdc.hidesWhenStopped = true
-            actIdc.center = CGPoint(x: container.frame.size.width / 2, y: container.frame.size.height / 2)
-            container.addSubview(actIdc)
-            window.addSubview(container)
-            actIdc.startAnimating()
-        }
-    }
-    
-    //인디케이터 삭제
-    func dissmissActivityIndicator(){
-        if let _ = window{
-            print("dissmiss 인디케이터 호출")
-            container.removeFromSuperview()
-        }
-    }
-    
-    
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         
@@ -84,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tbC.view.backgroundColor = .white
         tbC.view.tintColor = UIColor.white
         tbC.tabBar.barTintColor = UIColor(red:1.00, green:0.60, blue:0.60, alpha:1.0)
-        
+        tbC.tabBar.tintColor = UIColor.white
         //스토리보드 없이 code로 ui 제작
         window = UIWindow()
         window?.makeKeyAndVisible()
@@ -106,21 +74,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 생성된 뷰 컨트롤러 객체들을 탭바 뷰 컨트롤러 에 등록한다.
         tbC.setViewControllers([v1,v2,v3], animated: false)
         
+        
+        
         //직접 커스텀 하기
-        v1.tabBarItem.image = UIImage(named:"ic_spellcheck")?.withRenderingMode(.alwaysOriginal)
-        v2.tabBarItem.image = UIImage(named:"ic_translate")?.withRenderingMode(.alwaysOriginal)
-        v3.tabBarItem.image = UIImage(named:"ic_view_headline")?.withRenderingMode(.alwaysOriginal)
+        v1.tabBarItem.image = UIImage(named:"ic_wb_sunny")?.withRenderingMode(.alwaysOriginal)
+        v2.tabBarItem.image = UIImage(named:"ic_looks")?.withRenderingMode(.alwaysOriginal)
+        v3.tabBarItem.image = UIImage(named:"ic_format_list_bulleted")?.withRenderingMode(.alwaysOriginal)
+        
+        
+
         
         //선택되었을 때
         //let image =
-        v1.tabBarItem.selectedImage = UIImage(named:"ic_spellcheck_white")?.withRenderingMode(.alwaysOriginal)
-        v2.tabBarItem.selectedImage = UIImage(named:"ic_translate_white")?.withRenderingMode(.alwaysOriginal)
-        v3.tabBarItem.selectedImage = UIImage(named:"ic_view_headline_white")?.withRenderingMode(.alwaysOriginal)
+        v1.tabBarItem.selectedImage = UIImage(named:"ic_wb_sunny_white")?.withRenderingMode(.alwaysOriginal)
+        v2.tabBarItem.selectedImage = UIImage(named:"ic_looks_white")?.withRenderingMode(.alwaysOriginal)
+        v3.tabBarItem.selectedImage = UIImage(named:"ic_format_list_bulleted_white")?.withRenderingMode(.alwaysOriginal)
         
         //제목
         v1.tabBarItem.title = "영어"
         v2.tabBarItem.title = "한글"
         v3.tabBarItem.title = "더보기"
+        
+        
+    
         
         return true
     }

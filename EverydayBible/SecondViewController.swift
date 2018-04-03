@@ -114,7 +114,6 @@ class SecondViewController: UIViewController {
         textView.topAnchor.constraint(equalTo: containerBottomView.topAnchor).isActive = true
         textView.leadingAnchor.constraint(equalTo: containerBottomView.leadingAnchor, constant: 25).isActive = true
         textView.trailingAnchor.constraint(equalTo: containerBottomView.trailingAnchor, constant: -25).isActive = true
-        //textView.bottomAnchor.constraint(equalTo: containerBottomView.bottomAnchor).isActive = true
         textView.heightAnchor.constraint(equalTo: containerBottomView.heightAnchor).isActive = true
     }
     
@@ -122,12 +121,13 @@ class SecondViewController: UIViewController {
     //현재 날짜
     func getSingle(){
         let date = Date()
-        let calendar = Calendar.current
-        let year = calendar.component(.year, from: date)
-        let month = calendar.component(.month, from: date)
-        let day = calendar.component(.day, from: date)
-        lable.text = "\(year)년 \(month)월 \(day)일"
+        let calendar = Calendar.current //켈린더 객체 생성
+        let year = calendar.component(.year, from: date)    //년
+        let month = calendar.component(.month, from: date)  //월
+        let day = calendar.component(.day, from: date)      //일
+        lable.text = "\(year)-\(month)-\(day)"
         dateCheck = "\(year)\(month)\(day)"
+        //print(dateCheck!)
     }
     
     //firebase db 호출

@@ -11,10 +11,7 @@ import MessageUI
 class ThirdViewController: UITableViewController ,MFMailComposeViewControllerDelegate{
     var ref: DatabaseReference!
     var titles = [Text]()
-    
-    //let twoDimenstionArray = ["개발자에게","나가기"]
 
-    
     let uiView : UIView = {
         let uiView = UIView()
         uiView.backgroundColor = .yellow
@@ -65,7 +62,7 @@ class ThirdViewController: UITableViewController ,MFMailComposeViewControllerDel
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if (self.titles[indexPath.row].title == "개발자에게"){
-                print("개발자에게")
+                //print("개발자에게")
             let mailComposeViewController = configuredMailComposeViewController()
             if MFMailComposeViewController.canSendMail(){
                 self.present(mailComposeViewController, animated: true, completion: nil)
